@@ -2,6 +2,8 @@ package br.org.loja;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class LojaApplication {
@@ -10,4 +12,8 @@ public class LojaApplication {
 		SpringApplication.run(LojaApplication.class, args);
 	}
 
+	@Bean
+	public RestTemplate getRestTemplate() {
+		return new RestTemplate();
+	}
 }
