@@ -17,7 +17,7 @@ public class CompraService {
 	public void realizaCompra(CompraDTO compra) {
 		
 		ResponseEntity<InfoFornecedorDTO> exchange =
-			client.exchange("http://localhost:8091/info/"+compra.getEndereco().getEstado(),
+			client.exchange("http://localhost:8081/info/"+compra.getEndereco().getEstado(),
 			HttpMethod.GET, null, InfoFornecedorDTO.class);
 		
 		System.out.println(exchange.getBody().getEndereco());
