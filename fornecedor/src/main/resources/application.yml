@@ -6,3 +6,9 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://mongo:as132476@cluster0-ctze0.mongodb.net/loja?retryWrites=true&w=majority&ssl=true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -1,0 +1,17 @@
+{
+	"itens": [
+	     {
+		"id":1,
+		"quantidade": 5
+	     },
+	     {
+		"id":2,
+		"quantidade": 3
+	     }
+	],
+	"endereco":{
+		"rua": "Caio da Silva",
+		"numero": "123",
+		"estado": "SP"
+	}
+}

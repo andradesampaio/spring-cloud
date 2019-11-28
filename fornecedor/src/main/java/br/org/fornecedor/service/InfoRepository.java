@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface InfoRepository extends MongoRepository<InfoFornecedor, Long>{
+public interface InfoRepository extends MongoRepository<InfoFornecedor, String>{
 
 	InfoFornecedor findByEstado(String estado);
 
