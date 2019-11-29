@@ -1,6 +1,9 @@
 server:
   port: 8888
+
 spring:
+  application:
+    name: 'srvconfig'
   profiles:
     active: production
   cloud:
@@ -8,4 +11,11 @@ spring:
       server:
         git:
           uri: https://github.com/andradesampaio/microservice-repo
+          search-paths: fornecedor
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
 
