@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
-
+import java.util.UUID;
 
 
 @Document(collection = "produto")
@@ -12,14 +12,17 @@ public class Produto {
 
 	@Id
 	private String id;
-	
 	private String nome;
-	
 	private String estado;
-	
 	private String descricao;
-	
 	private BigDecimal preco;
+
+	public Produto(String nome, String estado, String descricao, BigDecimal preco) {
+		this.nome = nome;
+		this.estado = estado;
+		this.descricao = descricao;
+		this.preco = preco;
+	}
 
 	public String getId() {
 		return id;
